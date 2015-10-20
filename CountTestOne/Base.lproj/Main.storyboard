@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="npl-zf-8vl">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--My Ledger-->
+        <scene sceneID="yyP-tk-Cp5">
+            <objects>
+                <tableViewController id="nXM-NK-Dxq" customClass="LedgerTableViewController" customModule="CountTestOne" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="cwC-ZC-dCD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="4ZU-mb-7bG">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4ZU-mb-7bG" id="I5q-7d-dFl">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="1Mc-gu-ApZ" detailTextLabel="sZf-yR-nCG" style="IBUITableViewCellStyleValue1" id="mps-Og-0jm">
+                                <rect key="frame" x="0.0" y="136" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mps-Og-0jm" id="Znr-iG-63a">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1Mc-gu-ApZ">
+                                            <rect key="frame" x="15" y="12" width="32" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sZf-yR-nCG">
+                                            <rect key="frame" x="543" y="12" width="42" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="Update Ledger " trigger="accessoryAction" id="vvn-D7-COb"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="nXM-NK-Dxq" id="TCn-5P-d8A"/>
+                            <outlet property="delegate" destination="nXM-NK-Dxq" id="aRB-3s-jlr"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems>
+                        <barButtonItem id="F53-SQ-3rC"/>
+                        <barButtonItem systemItem="add" id="fYi-2J-Fhc">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="presentation" id="FRI-WS-1C7"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="My Ledger" id="ZvM-bL-Ahi"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lat-Km-ieQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1049" y="24"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CountTestOne" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jIH-2L-8xr">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <animations/>
+                                <items>
+                                    <navigationItem title="Ledger" id="1FD-zc-Wil">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="kqQ-FJ-0Rf">
+                                            <connections>
+                                                <action selector="btnBack:" destination="BYZ-38-t0r" id="CQv-eL-qRe"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="balance" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8lo-0J-Bwy">
+                                <rect key="frame" x="185" y="81" width="232" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="232" id="sNK-S0-h8f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="tIT-0q-aA8"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="identification " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sew-nX-1Bp">
+                                <rect key="frame" x="185" y="128" width="232" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="kUx-jO-8Ea"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="saving" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aOY-oV-ukI">
+                                <rect key="frame" x="185" y="176" width="232" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="3vh-a9-oAX"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="total" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v5R-z8-tR3">
+                                <rect key="frame" x="185" y="272" width="232" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ajm-4E-iIZ"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m0r-zt-Qeu">
+                                <rect key="frame" x="283" y="324" width="34" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="btnSave:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PkF-Rp-Iic"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxS-Ek-b0S">
+                                <rect key="frame" x="210" y="362" width="183" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="B9j-cU-HlB"/>
+                                    <constraint firstAttribute="width" constant="183" id="TNO-B7-lup"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="spending" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fjW-gf-Mf9">
+                                <rect key="frame" x="185" y="220" width="232" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="K8S-J0-5Vw"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aOY-oV-ukI" firstAttribute="trailing" secondItem="sew-nX-1Bp" secondAttribute="trailing" id="0du-0d-uc8"/>
+                            <constraint firstItem="kxS-Ek-b0S" firstAttribute="top" secondItem="m0r-zt-Qeu" secondAttribute="bottom" constant="8" symbolic="YES" id="2cL-po-fzn"/>
+                            <constraint firstItem="kxS-Ek-b0S" firstAttribute="centerX" secondItem="v5R-z8-tR3" secondAttribute="centerX" id="526-LN-BEr"/>
+                            <constraint firstItem="v5R-z8-tR3" firstAttribute="top" secondItem="fjW-gf-Mf9" secondAttribute="bottom" constant="22" id="7sN-Mp-kOe"/>
+                            <constraint firstItem="aOY-oV-ukI" firstAttribute="leading" secondItem="fjW-gf-Mf9" secondAttribute="leading" id="8rZ-FN-Ibv"/>
+                            <constraint firstItem="aOY-oV-ukI" firstAttribute="top" secondItem="sew-nX-1Bp" secondAttribute="bottom" constant="18" id="Dv9-f6-TQR"/>
+                            <constraint firstItem="jIH-2L-8xr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Gfy-Uz-4nQ"/>
+                            <constraint firstItem="m0r-zt-Qeu" firstAttribute="centerX" secondItem="jIH-2L-8xr" secondAttribute="centerX" id="JtL-oF-Tbn"/>
+                            <constraint firstItem="v5R-z8-tR3" firstAttribute="leading" secondItem="fjW-gf-Mf9" secondAttribute="leading" id="PF9-nR-Pyb"/>
+                            <constraint firstItem="8lo-0J-Bwy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="185" id="Pu9-iu-Pbk"/>
+                            <constraint firstItem="8lo-0J-Bwy" firstAttribute="top" secondItem="jIH-2L-8xr" secondAttribute="bottom" constant="37" id="QT2-aH-Emu"/>
+                            <constraint firstItem="aOY-oV-ukI" firstAttribute="leading" secondItem="sew-nX-1Bp" secondAttribute="leading" id="RSS-P4-byt"/>
+                            <constraint firstItem="8lo-0J-Bwy" firstAttribute="leading" secondItem="sew-nX-1Bp" secondAttribute="leading" id="Vg0-ww-yH8"/>
+                            <constraint firstAttribute="trailing" secondItem="jIH-2L-8xr" secondAttribute="trailing" id="ZZB-Uy-cCY"/>
+                            <constraint firstItem="v5R-z8-tR3" firstAttribute="trailing" secondItem="fjW-gf-Mf9" secondAttribute="trailing" id="cTV-Fh-kuw"/>
+                            <constraint firstItem="m0r-zt-Qeu" firstAttribute="top" secondItem="v5R-z8-tR3" secondAttribute="bottom" constant="22" id="dcR-SS-dtF"/>
+                            <constraint firstItem="sew-nX-1Bp" firstAttribute="top" secondItem="8lo-0J-Bwy" secondAttribute="bottom" constant="17" id="ecq-Oh-7ye"/>
+                            <constraint firstItem="jIH-2L-8xr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="i7w-HW-iqD"/>
+                            <constraint firstItem="sew-nX-1Bp" firstAttribute="trailing" secondItem="8lo-0J-Bwy" secondAttribute="trailing" id="muZ-4I-0f5"/>
+                            <constraint firstItem="fjW-gf-Mf9" firstAttribute="trailing" secondItem="aOY-oV-ukI" secondAttribute="trailing" id="r7q-UD-CJY"/>
+                            <constraint firstItem="fjW-gf-Mf9" firstAttribute="top" secondItem="aOY-oV-ukI" secondAttribute="bottom" constant="14" id="uyo-1g-VkZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6ct-Un-vVq"/>
+                    <connections>
+                        <outlet property="balance" destination="8lo-0J-Bwy" id="HLj-3b-uQi"/>
+                        <outlet property="btnBack" destination="jIH-2L-8xr" id="Xb9-9y-STV"/>
+                        <outlet property="btnSave" destination="m0r-zt-Qeu" id="px9-gQ-k6q"/>
+                        <outlet property="identification" destination="sew-nX-1Bp" id="kWC-W7-yny"/>
+                        <outlet property="saving" destination="aOY-oV-ukI" id="279-0S-UeE"/>
+                        <outlet property="spending" destination="fjW-gf-Mf9" id="f3g-TF-gx8"/>
+                        <outlet property="status" destination="kxS-Ek-b0S" id="n27-pj-rB5"/>
+                        <outlet property="total" destination="v5R-z8-tR3" id="kXO-HY-eFb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1763" y="24"/>
+        </scene>
+        <!--My Ledger -->
+        <scene sceneID="uPg-q6-Flt">
+            <objects>
+                <navigationController title="My Ledger " automaticallyAdjustsScrollViewInsets="NO" id="npl-zf-8vl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2QU-gJ-xI9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nXM-NK-Dxq" kind="relationship" relationship="rootViewController" id="6aR-ZY-lAd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4GQ-jP-gGt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="318" y="24"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="vvn-D7-COb"/>
+    </inferredMetricsTieBreakers>
+</document>
